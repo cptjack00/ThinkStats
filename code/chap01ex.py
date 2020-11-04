@@ -15,6 +15,9 @@ import thinkstats2
 
 
 def main(script):
+    df = nsfg.ReadFemResp('2002FemResp.dct','2002FemResp.dat.gz')
+    preg_map = nsfg.MakePregMap(df)
+    print(df.pregnum[preg_map[caseid]].values for caseid in preg_map.keys())
     """Tests the functions in this module.
 
     script: string script name
